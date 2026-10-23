@@ -1,0 +1,46 @@
+name: LiveOps GitOps Pipeline
+
+on:
+  push:
+    branches: [ staging, main ]
+    paths:
+      - 'configs/**'
+  pull_request:
+    branches: [ staging, main ]
+    paths:
+      - 'configs/**'
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Node.js & AJV CLI
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 3. Install Validator
+        run: npm install -g ajv-cli ajv-formats
+
+      - name: 4. Validate Offer Configs against Schema
+        run: |
+          echo "🔍 Validando configs/offers/ contra schemas/offers/bundle_offer.json..."
+          ajv -s schemas/offers/bundle_offer.json -d "configs/offers/*.json" -c ajv-formats --spec=draft7
+          echo "✅ Todos los JSON de configuración son válidos según el contrato."
+
+      - name: 5. Emulate LiveOps Deployment
+        if: github.event_name == 'push'
+        run: |
+          TARGET_ENV="${{ github.ref_name }}"
+          echo "=========================================="
+          echo "🚀 DESPLIEGUE AUTOMÁTICO A ENTORNO: $TARGET_ENV"
+          echo "Autor del commit: ${{ github.actor }}"
+          echo "Mensaje: ${{ github.event.head_commit.message }}"
+          echo "Archivos actualizados:"
+          ls -la configs/offers/
+          echo "Sincronizando con CDN / S3 del entorno $TARGET_ENV..."
+          echo "✅ Despliegue completado con éxito."
+          echo "=========================================="

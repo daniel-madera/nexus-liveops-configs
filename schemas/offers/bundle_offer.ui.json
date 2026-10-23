@@ -1,0 +1,32 @@
+{
+  "id": {
+    "ui:disabled": true,
+    "ui:gridCol": 4
+  },
+  "name": {
+    "ui:gridCol": 8
+  },
+  "price": {
+    "ui:gridCol": 4
+  },
+  "currency": {
+    "ui:gridCol": 4
+  },
+  "enabled": {
+    "ui:gridCol": 4
+  },
+  "rewards": {
+    "ui:gridCol": 12,
+    "coins": { "ui:gridCol": 4 },
+    "gems": { "ui:gridCol": 4 },
+    "energy": { "ui:gridCol": 4 }
+  },
+  "tags": {
+    "ui:gridCol": 12,
+    "ui:options": {
+      "addable": true,
+      "removable": true,
+      "orderable": false
+    }
+  }
+}

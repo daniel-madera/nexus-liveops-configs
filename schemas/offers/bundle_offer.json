@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Game Offer Configuration",
+  "description": "JSON Schema defining in-game offers and bundles for Nexus LiveOps",
+  "type": "object",
+  "required": ["id", "name", "price", "currency", "enabled"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "Offer ID",
+      "readOnly": true
+    },
+    "name": {
+      "type": "string",
+      "title": "Bundle / Pack Name",
+      "minLength": 3
+    },
+    "price": {
+      "type": "number",
+      "title": "Price",
+      "minimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "title": "Currency",
+      "enum": ["USD", "EUR", "ARS", "BRL"],
+      "default": "USD"
+    },
+    "enabled": {
+      "type": "boolean",
+      "title": "Active / Published",
+      "default": true
+    },
+    "rewards": {
+      "type": "object",
+      "title": "Rewards Payload",
+      "required": ["coins", "gems"],
+      "properties": {
+        "coins": {
+          "type": "integer",
+          "title": "Coins",
+          "minimum": 0,
+          "default": 0
+        },
+        "gems": {
+          "type": "integer",
+          "title": "Gems",
+          "minimum": 0,
+          "default": 0
+        },
+        "energy": {
+          "type": "integer",
+          "title": "Energy (Optional)",
+          "minimum": 0,
+          "default": 0
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "title": "Tags & Segmentation",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
