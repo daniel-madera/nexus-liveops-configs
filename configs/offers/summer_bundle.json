@@ -1,16 +1,25 @@
 {
-  "id": "offer_7721",
-  "name": "Summer Starter Pack",
-  "price": 4.99,
-  "currency": "EUR",
+  "name": "summer_bundle.json",
+  "path": "configs/offers/summer_bundle.json",
+  "sha": "ec10f3b6675c60c2b68a6a63419916f071af1367",
+  "size": 227,
+  "url": "https://api.github.com/repos/daniel-madera/nexus-liveops-configs/contents/configs/offers/summer_bundle.json?ref=staging",
+  "html_url": "https://github.com/daniel-madera/nexus-liveops-configs/blob/staging/configs/offers/summer_bundle.json",
+  "git_url": "https://api.github.com/repos/daniel-madera/nexus-liveops-configs/git/blobs/ec10f3b6675c60c2b68a6a63419916f071af1367",
+  "download_url": "https://raw.githubusercontent.com/daniel-madera/nexus-liveops-configs/staging/configs/offers/summer_bundle.json",
+  "type": "file",
+  "content": "ewogICJpZCI6ICJvZmZlcl83NzIxIiwKICAibmFtZSI6ICJTdW1tZXIgU3Rh\ncnRlciBQYWNrIiwKICAicHJpY2UiOiA0Ljk5LAogICJjdXJyZW5jeSI6ICJF\nVVIiLAogICJlbmFibGVkIjogdHJ1ZSwKICAicmV3YXJkcyI6IHsKICAgICJj\nb2lucyI6IDUwMCwKICAgICJnZW1zIjogMTAsCiAgICAiZW5lcmd5IjogMAog\nIH0sCiAgInRhZ3MiOiBbCiAgICAicHJvbW8iLAogICAgInN1bW1lciIKICBd\nCn0=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/daniel-madera/nexus-liveops-configs/contents/configs/offers/summer_bundle.json?ref=staging",
+    "git": "https://api.github.com/repos/daniel-madera/nexus-liveops-configs/git/blobs/ec10f3b6675c60c2b68a6a63419916f071af1367",
+    "html": "https://github.com/daniel-madera/nexus-liveops-configs/blob/staging/configs/offers/summer_bundle.json"
+  },
+  "currency": "USD",
   "enabled": true,
   "rewards": {
-    "coins": 500,
-    "gems": 10,
+    "coins": 0,
+    "gems": 0,
     "energy": 0
-  },
-  "tags": [
-    "promo",
-    "summer"
-  ]
+  }
 }
