@@ -1,1 +1,12 @@
-%7B%0A%20%20%22id%22%3A%20%22offer_7721%22%2C%0A%20%20%22name%22%3A%20%22Summer%20Starter%20Pack%22%2C%0A%20%20%22price%22%3A%204.99%2C%0A%20%20%22currency%22%3A%20%22USD%22%2C%0A%20%20%22enabled%22%3A%20true%2C%0A%20%20%22rewards%22%3A%20%7B%0A%20%20%20%20%22coins%22%3A%20500%2C%0A%20%20%20%20%22gems%22%3A%2010%2C%0A%20%20%20%20%22energy%22%3A%200%0A%20%20%7D%2C%0A%20%20%22tags%22%3A%20%5B%0A%20%20%20%20%22promo%22%2C%0A%20%20%20%20%22summer%22%0A%20%20%5D%0A%7D
+{
+  "id": "offer_7721",
+  "name": "Summer Starter Pack",
+  "price": 4.99,
+  "currency": "USD",
+  "enabled": true,
+  "rewards": {
+    "coins": 500,
+    "gems": 10
+  },
+  "tags": ["promo", "summer"]
+}
