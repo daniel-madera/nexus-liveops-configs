@@ -1,8 +1,8 @@
 {
   "id": "offer_7721",
   "name": "Summer Starter Pack",
-  "price": 4.99,
-  "currency": "EUR",
+  "price": 1,
+  "currency": "USD",
   "enabled": true,
   "rewards": {
     "coins": 500,
@@ -10,7 +10,6 @@
     "energy": 0
   },
   "tags": [
-    "promo",
-    "summer"
+    "promo"
   ]
 }
